@@ -80,3 +80,8 @@ git status 下中文显示乱码问题解决
 git reset --hard
 
 git pull
+
+ git branch -D pichuli20190329002551
+ git push origin --delete  remotes/origin/daily-3-28-1
+ git pull --rebase origin master
+ git reset --hard FETCH_HEAD
