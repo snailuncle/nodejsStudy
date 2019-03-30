@@ -26,13 +26,21 @@ const req = https.request(fileUrl, options, (res) => {
   console.log(`状态码: ${res.statusCode}`);
   console.log(`响应头: ${JSON.stringify(res.headers)}`);
   res.setEncoding('utf8');
+  var finalData=''
   res.on('data', (chunk) => {
     console.log(`响应主体: ${chunk}`);
+    finalData+=chunk
   });
   res.on('end', () => {
     console.log('响应中已无数据');
+    log(res)
+    log(finalData)
+    var result=JSON.parse(finalData)
+    console.log(result.url)
+    // resolve(result.url)
   });
 });
+
 req.on('error', (e) => {
   console.error(`请求遇到问题: ${e.message}`);
 });
