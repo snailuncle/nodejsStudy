@@ -14,8 +14,8 @@ var config = {
   },
 }
 
-var fileName = 'jsoup.jar'
-var fileUrl = 'http://bmob-cdn-11368.b0.upaiyun.com/2019/03/01/33dd4f2f40b9a65980765ec28535c906.jar'
+var fileName = 'onepiece.png'
+var fileUrl = 'http://bmob-cdn-11368.b0.upaiyun.com/2019/03/30/82a0632040c78d77804c6f1905851300.png'
 console.log('fileUrl=')
 console.log(fileUrl)
 async function moveFile(fileName,fileUrl) {
